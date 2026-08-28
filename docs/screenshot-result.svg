@@ -1,82 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860" role="img" aria-label="ocrshow result">
-  <defs>
-    <filter id="sh2" x="-2%" y="-4%" width="104%" height="112%">
-      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#291808" flood-opacity="0.12"/>
-    </filter>
-    <clipPath id="win2"><rect x="40" y="40" width="1200" height="780" rx="18"/></clipPath>
-  </defs>
-
   <rect width="1280" height="860" fill="#d9cfc0"/>
-  <rect x="40" y="40" width="1200" height="780" rx="18" fill="#efe8dc" filter="url(#sh2)"/>
-
+  <rect x="40" y="40" width="1200" height="780" rx="18" fill="#efe8dc"/>
   <rect x="40" y="40" width="1200" height="46" rx="18" fill="#f4eee4"/>
   <rect x="40" y="68" width="1200" height="18" fill="#f4eee4"/>
   <circle cx="68" cy="63" r="7" fill="#e11d48"/>
   <circle cx="90" cy="63" r="7" fill="#d97706"/>
   <circle cx="112" cy="63" r="7" fill="#0f766e"/>
-  <rect x="430" y="52" width="420" height="22" rx="11" fill="#fff"/>
-  <text x="640" y="67" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" fill="#78716c">127.0.0.1:5173/jobs/8f2a1c</text>
+  <rect x="430" y="52" width="420" height="22" rx="11" fill="#ffffff"/>
+  <text x="640" y="67" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#78716c">127.0.0.1:5173/jobs/8f2a1c</text>
 
-  <g clip-path="url(#win2)">
-    <rect x="40" y="86" width="1200" height="734" fill="#efe8dc"/>
-    <ellipse cx="180" cy="70" rx="420" ry="160" fill="#f8efe3"/>
+  <rect x="40" y="86" width="1200" height="734" fill="#efe8dc"/>
+  <ellipse cx="180" cy="70" rx="420" ry="160" fill="#f8efe3"/>
 
-    <rect x="88" y="112" width="72" height="28" rx="8" fill="none" stroke="#e0d4c4"/>
-    <text x="124" y="131" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="12" fill="#1c1917"> ÔŞ</text>
-    <rect x="1056" y="112" width="136" height="28" rx="8" fill="none" stroke="#e0d4c4"/>
-    <text x="1124" y="131" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="12" fill="#1c1917">üú JSON</text>
+  <rect x="88" y="112" width="72" height="28" rx="8" fill="none" stroke="#e0d4c4"/>
+  <text x="124" y="131" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#1c1917">â† è¿”å›</text>
+  <rect x="1056" y="112" width="136" height="28" rx="8" fill="none" stroke="#e0d4c4"/>
+  <text x="1124" y="131" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#1c1917">å¯¼å‡º JSON</text>
 
-    <rect x="88" y="156" width="1104" height="78" rx="16" fill="#fffaf3" stroke="#e0d4c4"/>
-    <text x="112" y="190" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#1c1917">(h<</text>
-    <text x="112" y="214" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="13" fill="#78716c">û¡ 8f2a1c · 2  ş · 12 a°U</text>
-    <rect x="1078" y="180" width="90" height="26" rx="13" fill="#ccfbf1"/>
-    <text x="1123" y="197" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#0f766e">òŒ</text>
+  <rect x="88" y="156" width="1104" height="78" rx="16" fill="#fffaf3" stroke="#e0d4c4"/>
+  <text x="112" y="190" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#1c1917">é€šç”¨è¡¨æ ¼</text>
+  <text x="112" y="214" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13" fill="#78716c">ä»»åŠ¡ 8f2a1c Â· 2 å¼ å›¾ Â· 12 æ¡è®°å½•</text>
+  <rect x="1078" y="180" width="90" height="26" rx="13" fill="#ccfbf1"/>
+  <text x="1123" y="197" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#0f766e">å·²å®Œæˆ</text>
 
-    <!-- thumbs -->
-    <g transform="translate(88,250)">
-      <rect width="220" height="148" rx="16" fill="#fffaf3" stroke="#e0d4c4"/>
-      <rect x="8" y="8" width="204" height="110" rx="8" fill="#ddd2c2"/>
-      <rect x="20" y="24" width="120" height="7" rx="3" fill="#b8a48c"/>
-      <rect x="20" y="40" width="180" height="6" rx="3" fill="#cbbba4"/>
-      <rect x="20" y="54" width="164" height="6" rx="3" fill="#cbbba4"/>
-      <rect x="20" y="68" width="148" height="6" rx="3" fill="#cbbba4"/>
-      <rect x="20" y="82" width="96" height="6" rx="3" fill="#cbbba4"/>
-      <text x="16" y="138" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" fill="#78716c">sheet-a.png</text>
+  <rect x="88" y="250" width="220" height="148" rx="16" fill="#fffaf3" stroke="#e0d4c4"/>
+  <rect x="96" y="258" width="204" height="110" rx="8" fill="#ddd2c2"/>
+  <rect x="108" y="274" width="120" height="7" rx="3" fill="#b8a48c"/>
+  <rect x="108" y="290" width="180" height="6" rx="3" fill="#cbbba4"/>
+  <rect x="108" y="304" width="164" height="6" rx="3" fill="#cbbba4"/>
+  <rect x="108" y="318" width="148" height="6" rx="3" fill="#cbbba4"/>
+  <rect x="108" y="332" width="96" height="6" rx="3" fill="#cbbba4"/>
+  <text x="104" y="388" font-family="Segoe UI, sans-serif" font-size="12" fill="#78716c">sheet-a.png</text>
 
-      <g transform="translate(236,0)">
-        <rect width="220" height="148" rx="16" fill="#fffaf3" stroke="#e0d4c4"/>
-        <rect x="8" y="8" width="204" height="110" rx="8" fill="#ddd2c2"/>
-        <rect x="20" y="24" width="100" height="7" rx="3" fill="#b8a48c"/>
-        <rect x="20" y="40" width="176" height="6" rx="3" fill="#cbbba4"/>
-        <rect x="20" y="54" width="152" height="6" rx="3" fill="#cbbba4"/>
-        <rect x="20" y="68" width="168" height="6" rx="3" fill="#cbbba4"/>
-        <rect x="20" y="82" width="88" height="6" rx="3" fill="#cbbba4"/>
-        <text x="16" y="138" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" fill="#78716c">sheet-b.png</text>
-      </g>
-    </g>
+  <rect x="324" y="250" width="220" height="148" rx="16" fill="#fffaf3" stroke="#e0d4c4"/>
+  <rect x="332" y="258" width="204" height="110" rx="8" fill="#ddd2c2"/>
+  <rect x="344" y="274" width="100" height="7" rx="3" fill="#b8a48c"/>
+  <rect x="344" y="290" width="176" height="6" rx="3" fill="#cbbba4"/>
+  <rect x="344" y="304" width="152" height="6" rx="3" fill="#cbbba4"/>
+  <rect x="344" y="318" width="168" height="6" rx="3" fill="#cbbba4"/>
+  <rect x="344" y="332" width="88" height="6" rx="3" fill="#cbbba4"/>
+  <text x="340" y="388" font-family="Segoe UI, sans-serif" font-size="12" fill="#78716c">sheet-b.png</text>
 
-    <!-- table -->
-    <rect x="88" y="416" width="1104" height="376" rx="16" fill="#fffaf3" stroke="#e0d4c4"/>
-    <text x="112" y="448" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#78716c">÷</text>
-    <text x="200" y="448" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#78716c">L</text>
-    <text x="280" y="448" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#78716c">‡,</text>
-    <text x="980" y="448" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#78716c">şG</text>
-    <line x1="112" y1="460" x2="1168" y2="460" stroke="#e0d4c4"/>
+  <rect x="88" y="416" width="1104" height="376" rx="16" fill="#fffaf3" stroke="#e0d4c4"/>
+  <text x="112" y="448" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#78716c">åºå·</text>
+  <text x="200" y="448" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#78716c">è¡Œ</text>
+  <text x="280" y="448" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#78716c">æ–‡æœ¬</text>
+  <text x="980" y="448" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#78716c">å›¾ç‰‡</text>
+  <line x1="112" y1="460" x2="1168" y2="460" stroke="#e0d4c4"/>
 
-    <g font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="13" fill="#1c1917">
-      <text x="112" y="492">1</text><text x="200" y="492">1</text><text x="280" y="492">”(ğ</text><text x="980" y="492" fill="#78716c">sheet-a.png</text>
-      <line x1="112" y1="508" x2="1168" y2="508" stroke="#e0d4c4"/>
-      <text x="112" y="540">2</text><text x="200" y="540">1</text><text x="280" y="540">Êå}</text><text x="980" y="540" fill="#78716c">sheet-a.png</text>
-      <line x1="112" y1="556" x2="1168" y2="556" stroke="#e0d4c4"/>
-      <text x="112" y="588">3</text><text x="200" y="588">2</text><text x="280" y="588">Notes Lite</text><text x="980" y="588" fill="#78716c">sheet-a.png</text>
-      <line x1="112" y1="604" x2="1168" y2="604" stroke="#e0d4c4"/>
-      <text x="112" y="636">4</text><text x="200" y="636">2</text><text x="280" y="636">128,400</text><text x="980" y="636" fill="#78716c">sheet-a.png</text>
-      <line x1="112" y1="652" x2="1168" y2="652" stroke="#e0d4c4"/>
-      <text x="112" y="684">5</text><text x="200" y="684">3</text><text x="280" y="684">Camera Pro</text><text x="980" y="684" fill="#78716c">sheet-b.png</text>
-      <line x1="112" y1="700" x2="1168" y2="700" stroke="#e0d4c4"/>
-      <text x="112" y="732">6</text><text x="200" y="732">3</text><text x="280" y="732">96,210</text><text x="980" y="732" fill="#78716c">sheet-b.png</text>
-      <line x1="112" y1="748" x2="1168" y2="748" stroke="#e0d4c4"/>
-      <text x="112" y="780">7</text><text x="200" y="780">4</text><text x="280" y="780">Weather Kit</text><text x="980" y="780" fill="#78716c">sheet-b.png</text>
-    </g>
-  </g>
+  <text x="112" y="492" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">1</text>
+  <text x="200" y="492" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">1</text>
+  <text x="280" y="492" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13" fill="#1c1917">åº”ç”¨åç§°</text>
+  <text x="980" y="492" font-family="Segoe UI, sans-serif" font-size="13" fill="#78716c">sheet-a.png</text>
+  <line x1="112" y1="508" x2="1168" y2="508" stroke="#e0d4c4"/>
+
+  <text x="112" y="540" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">2</text>
+  <text x="200" y="540" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">1</text>
+  <text x="280" y="540" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13" fill="#1c1917">ä»Šæ—¥ä¸‹è½½</text>
+  <text x="980" y="540" font-family="Segoe UI, sans-serif" font-size="13" fill="#78716c">sheet-a.png</text>
+  <line x1="112" y1="556" x2="1168" y2="556" stroke="#e0d4c4"/>
+
+  <text x="112" y="588" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">3</text>
+  <text x="200" y="588" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">2</text>
+  <text x="280" y="588" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">Notes Lite</text>
+  <text x="980" y="588" font-family="Segoe UI, sans-serif" font-size="13" fill="#78716c">sheet-a.png</text>
+  <line x1="112" y1="604" x2="1168" y2="604" stroke="#e0d4c4"/>
+
+  <text x="112" y="636" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">4</text>
+  <text x="200" y="636" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">2</text>
+  <text x="280" y="636" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">128,400</text>
+  <text x="980" y="636" font-family="Segoe UI, sans-serif" font-size="13" fill="#78716c">sheet-a.png</text>
+  <line x1="112" y1="652" x2="1168" y2="652" stroke="#e0d4c4"/>
+
+  <text x="112" y="684" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">5</text>
+  <text x="200" y="684" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">3</text>
+  <text x="280" y="684" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">Camera Pro</text>
+  <text x="980" y="684" font-family="Segoe UI, sans-serif" font-size="13" fill="#78716c">sheet-b.png</text>
+  <line x1="112" y1="700" x2="1168" y2="700" stroke="#e0d4c4"/>
+
+  <text x="112" y="732" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">6</text>
+  <text x="200" y="732" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">3</text>
+  <text x="280" y="732" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">96,210</text>
+  <text x="980" y="732" font-family="Segoe UI, sans-serif" font-size="13" fill="#78716c">sheet-b.png</text>
+  <line x1="112" y1="748" x2="1168" y2="748" stroke="#e0d4c4"/>
+
+  <text x="112" y="780" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">7</text>
+  <text x="200" y="780" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">4</text>
+  <text x="280" y="780" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917">Weather Kit</text>
+  <text x="980" y="780" font-family="Segoe UI, sans-serif" font-size="13" fill="#78716c">sheet-b.png</text>
 </svg>

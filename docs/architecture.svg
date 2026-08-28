@@ -1,56 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="280" viewBox="0 0 1120 280" role="img" aria-label="ocrshow architecture">
-  <defs>
-    <filter id="s" x="-8%" y="-12%" width="116%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#291808" flood-opacity="0.08"/>
-    </filter>
-  </defs>
   <rect width="1120" height="280" rx="20" fill="#efe8dc"/>
   <rect x="20" y="20" width="1080" height="240" rx="16" fill="#fffaf3" stroke="#e0d4c4"/>
 
-  <!-- 1 screenshot -->
   <g transform="translate(52,70)">
-    <rect width="150" height="140" rx="14" fill="#fff" stroke="#e0d4c4" filter="url(#s)"/>
+    <rect width="150" height="140" rx="14" fill="#ffffff" stroke="#e0d4c4"/>
     <rect x="16" y="16" width="118" height="72" rx="8" fill="#ffedd5"/>
     <rect x="24" y="28" width="70" height="6" rx="3" fill="#c4a484"/>
     <rect x="24" y="42" width="102" height="6" rx="3" fill="#e0d4c4"/>
     <rect x="24" y="56" width="88" height="6" rx="3" fill="#e0d4c4"/>
-    <text x="75" y="116" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#1c1917">h<*�</text>
+    <text x="75" y="116" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#1c1917">表格截图</text>
   </g>
   <path d="M214 140 h46" stroke="#c4a484" stroke-width="2" fill="none"/>
   <polygon points="258,136 268,140 258,144" fill="#c4a484"/>
 
-  <!-- 2 OCR -->
   <g transform="translate(284,70)">
-    <rect width="170" height="140" rx="14" fill="#1c1917" filter="url(#s)"/>
-    <text x="85" y="58" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" fill="#fed7aa">PaddleOCR</text>
-    <text x="85" y="82" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#fff7ed">PP-StructureV3</text>
-    <text x="85" y="116" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="12" fill="#a8a29e">�h � �WF � HTML h</text>
+    <rect width="170" height="140" rx="14" fill="#1c1917"/>
+    <text x="85" y="58" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" fill="#fed7aa">PaddleOCR</text>
+    <text x="85" y="82" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#fff7ed">PP-StructureV3</text>
+    <text x="85" y="116" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#a8a29e">读表 · 文字框 · HTML 表</text>
   </g>
   <path d="M466 140 h46" stroke="#c4a484" stroke-width="2" fill="none"/>
   <polygon points="510,136 520,140 510,144" fill="#c4a484"/>
 
-  <!-- 3 sheets -->
   <g transform="translate(536,70)">
-    <rect width="170" height="140" rx="14" fill="#fff" stroke="#e0d4c4" filter="url(#s)"/>
-    <text x="85" y="48" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#1c1917">H!W</text>
+    <rect width="170" height="140" rx="14" fill="#ffffff" stroke="#e0d4c4"/>
+    <text x="85" y="48" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#1c1917">版式模块</text>
     <rect x="22" y="62" width="126" height="22" rx="6" fill="#ffedd5"/>
-    <text x="85" y="77" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="11" fill="#9a3412">�9M / generic</text>
+    <text x="85" y="77" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11" fill="#9a3412">自动匹配 / generic</text>
     <rect x="22" y="92" width="126" height="22" rx="6" fill="#f5f0e8"/>
-    <text x="85" y="107" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="11" fill="#78716c">sheets/private �	</text>
+    <text x="85" y="107" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11" fill="#78716c">sheets/private 可选</text>
   </g>
   <path d="M718 140 h46" stroke="#c4a484" stroke-width="2" fill="none"/>
   <polygon points="762,136 772,140 762,144" fill="#c4a484"/>
 
-  <!-- 4 output -->
   <g transform="translate(788,70)">
-    <rect width="270" height="140" rx="14" fill="#fff" stroke="#e0d4c4" filter="url(#s)"/>
-    <text x="135" y="40" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#1c1917">ӄ�U</text>
+    <rect width="270" height="140" rx="14" fill="#ffffff" stroke="#e0d4c4"/>
+    <text x="135" y="40" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#1c1917">结构化记录</text>
     <rect x="18" y="56" width="72" height="28" rx="8" fill="#ccfbf1"/>
-    <text x="54" y="74" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#0f766e">JSON</text>
+    <text x="54" y="74" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#0f766e">JSON</text>
     <rect x="99" y="56" width="72" height="28" rx="8" fill="#ffedd5"/>
-    <text x="135" y="74" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#9a3412">CSV</text>
+    <text x="135" y="74" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#9a3412">CSV</text>
     <rect x="180" y="56" width="72" height="28" rx="8" fill="#dbeafe"/>
-    <text x="216" y="74" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1d4ed8">Excel</text>
-    <text x="135" y="116" text-anchor="middle" font-family="IBM Plex Sans, Noto Sans SC, Segoe UI, sans-serif" font-size="12" fill="#78716c">�	 Qwen3-VL �g���</text>
+    <text x="216" y="74" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1d4ed8">Excel</text>
+    <text x="135" y="116" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#78716c">可选 Qwen3-VL 对照原图纠错</text>
   </g>
 </svg>
