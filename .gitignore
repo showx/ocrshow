@@ -26,6 +26,12 @@ config.local.json
 *.tiff
 *.gif
 
+# Public docs assets for the README (no real screenshots)
+!docs/
+!docs/**
+!docs/**/*.svg
+!docs/**/*.png
+
 # Runtime data, OCR output, models
 output/
 data/
