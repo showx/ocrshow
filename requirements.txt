@@ -1,0 +1,6 @@
+paddlepaddle-gpu==3.2.2
+paddleocr[doc-parser]
+openai>=1.0.0
+openpyxl
+pillow
+requests

@@ -1,0 +1,168 @@
+:root {
+  --paper: #efe8dc;
+  --ink: #1c1917;
+  --muted: #78716c;
+  --line: #e0d4c4;
+  --card: #fffaf3;
+  --accent: #9a3412;
+  --accent-soft: #ffedd5;
+  --ok: #0f766e;
+  --ok-soft: #ccfbf1;
+  --warn: #b45309;
+  --warn-soft: #fef3c7;
+  --bad: #b91c1c;
+  --bad-soft: #fee2e2;
+  --run: #1d4ed8;
+  --run-soft: #dbeafe;
+  --shadow: 0 10px 30px rgba(41, 24, 8, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "IBM Plex Sans", "Noto Sans SC", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #f8efe3, transparent),
+    var(--paper);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 24px 72px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.mark {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  color: #fff7ed;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 10px;
+}
+
+.brand strong {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+
+.brand small {
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.pending {
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+.badge.running {
+  background: var(--run-soft);
+  color: var(--run);
+}
+.badge.succeeded {
+  background: var(--ok-soft);
+  color: var(--ok);
+}
+.badge.failed {
+  background: var(--bad-soft);
+  color: var(--bad);
+}
+
+.btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  background: var(--ink);
+  color: #fff7ed;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.btn.danger {
+  background: var(--bad);
+}
+
+.btn.tiny {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.empty {
+  padding: 36px 16px;
+  text-align: center;
+  color: var(--muted);
+}

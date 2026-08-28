@@ -1,0 +1,57 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+*.egg-info/
+.DS_Store
+Thumbs.db
+
+# Local / private config and secrets — never commit
+.env
+.env.*
+!.env.example
+config.toml
+config.local.toml
+config.json
+config.local.json
+
+# Screenshots and other images contain business data
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+*.tif
+*.tiff
+*.gif
+
+# Runtime data, OCR output, models
+output/
+data/
+models/
+.paddlex/
+*.xlsx
+*.xlsm
+*.csv
+*.db
+*.sqlite
+*.sqlite3
+
+# Company layout parsers — drop-in, not part of the public repo
+sheets/private/
+_private_body.py
+
+# Local scratch / probe scripts (often contain real URLs)
+_url_probe*.py
+
+# Web build artifacts
+frontend/node_modules/
+frontend/dist/
+backend/ocrshow.exe
+backend/ocrshow
+backend/*.exe
+
+# Keep the samples directory in git, but not the files inside
+samples/*
+!samples/.gitkeep
