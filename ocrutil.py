@@ -236,7 +236,7 @@ def longest_digit_run(text: str) -> str:
 
 def split_row_and_name(text: str) -> tuple[int | None, str]:
     text = re.sub(r"\s+", " ", (text or "")).strip()
-    m = re.match(r"^(\d{1,2})\s*([\u4e00-\u9fffA-Za-z].+)$", text)
+    m = re.match(r"^(\d{1,2})[\s:：._-]*([\u4e00-\u9fffA-Za-z].+)$", text)
     if m:
         return int(m.group(1)), m.group(2).strip()
     if re.fullmatch(r"\d{1,3}", text):
