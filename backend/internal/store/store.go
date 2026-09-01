@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 
 	_ "modernc.org/sqlite"
@@ -78,6 +79,20 @@ CREATE TABLE IF NOT EXISTS records (
 CREATE INDEX IF NOT EXISTS idx_jobs_created ON jobs(created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_files_job ON job_files(job_id);
 CREATE INDEX IF NOT EXISTS idx_records_job ON records(job_id);
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE COLLATE NOCASE,
+    password_hash TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS sessions (
+    token TEXT PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    expires_at TEXT NOT NULL,
+    created_at TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE INDEX IF NOT EXISTS idx_sessions_expires ON sessions(expires_at);
 `)
 	return err
 }
@@ -271,6 +286,47 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`)
 	return tx.Commit()
 }
 
+func (s *Store) ReplaceRecords(id string, records []map[string]any) error {
+	tx, err := s.db.Begin()
+	if err != nil {
+		return err
+	}
+	defer tx.Rollback()
+	if _, err := tx.Exec(`DELETE FROM records WHERE job_id = ?`, id); err != nil {
+		return err
+	}
+	stmt, err := tx.Prepare(`
+INSERT INTO records (job_id, sheet_type, image, date, rank, excel_row, col_group, app_name, payload)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`)
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
+	for _, rec := range records {
+		if rec == nil {
+			rec = map[string]any{}
+		}
+		payload, _ := json.Marshal(rec)
+		if _, err := stmt.Exec(
+			id,
+			AsString(rec["sheet_type"]),
+			AsString(rec["image"]),
+			AsString(rec["date"]),
+			asInt(rec["rank"]),
+			asInt(rec["excel_row"]),
+			asInt(rec["col_group"]),
+			AsString(rec["app_name"]),
+			string(payload),
+		); err != nil {
+			return err
+		}
+	}
+	if _, err := tx.Exec(`UPDATE jobs SET record_count = ? WHERE id = ?`, len(records), id); err != nil {
+		return err
+	}
+	return tx.Commit()
+}
+
 func (s *Store) ListPending() ([]string, error) {
 	rows, err := s.db.Query(`SELECT id FROM jobs WHERE status IN ('pending', 'running') ORDER BY created_at`)
 	if err != nil {
@@ -355,6 +411,12 @@ func asInt(v any) int {
 	case json.Number:
 		n, _ := t.Int64()
 		return int(n)
+	case string:
+		n, err := strconv.Atoi(strings.TrimSpace(t))
+		if err != nil {
+			return 0
+		}
+		return n
 	default:
 		return 0
 	}

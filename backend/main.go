@@ -26,6 +26,18 @@ func main() {
 	}
 	defer st.Close()
 
+	seeds := make([]store.AuthUserSeed, 0, len(cfg.AuthUsers))
+	for _, u := range cfg.AuthUsers {
+		seeds = append(seeds, store.AuthUserSeed{Username: u.Username, Password: u.Password})
+	}
+	usedDefault, err := st.EnsureAuthUsers(seeds)
+	if err != nil {
+		log.Fatalf("初始化登录账号失败: %v", err)
+	}
+	if usedDefault {
+		log.Print("未配置 Web 账号，已创建默认账号 admin / ocrshow，请尽快在 .env 或 config.toml 中修改")
+	}
+
 	w := worker.New(cfg, st)
 	w.Start()
 	if err := w.RecoverPending(); err != nil {

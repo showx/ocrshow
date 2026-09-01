@@ -31,6 +31,16 @@ type JobFile struct {
 	Date       string `json:"date,omitempty"`
 }
 
+type User struct {
+	ID       int64  `json:"id"`
+	Username string `json:"username"`
+}
+
+type AuthUserSeed struct {
+	Username string
+	Password string
+}
+
 type Record struct {
 	ID        int64          `json:"id"`
 	JobID     string         `json:"job_id"`

@@ -87,6 +87,18 @@ input {
   color: var(--muted);
 }
 
+.who {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.shell.slim {
+  max-width: 720px;
+}
+
 .card {
   background: var(--card);
   border: 1px solid var(--line);

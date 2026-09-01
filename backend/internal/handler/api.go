@@ -189,6 +189,47 @@ func (a *API) ServeFile(c *gin.Context) {
 	c.File(path)
 }
 
+func (a *API) UpdateRecords(c *gin.Context) {
+	id := c.Param("id")
+	job, err := a.store.GetJob(id, false)
+	if errors.Is(err, sql.ErrNoRows) {
+		fail(c, http.StatusNotFound, "任务不存在")
+		return
+	}
+	if err != nil {
+		fail(c, http.StatusInternalServerError, err.Error())
+		return
+	}
+	if job.Status == "pending" || job.Status == "running" {
+		fail(c, http.StatusConflict, "识别尚未完成，不能修改")
+		return
+	}
+	var body struct {
+		Records []map[string]any `json:"records"`
+	}
+	if err := c.ShouldBindJSON(&body); err != nil {
+		fail(c, http.StatusBadRequest, "请求格式无效")
+		return
+	}
+	if body.Records == nil {
+		body.Records = []map[string]any{}
+	}
+	if len(body.Records) > 2000 {
+		fail(c, http.StatusBadRequest, "一次最多保存 2000 条")
+		return
+	}
+	if err := a.store.ReplaceRecords(id, body.Records); err != nil {
+		fail(c, http.StatusInternalServerError, err.Error())
+		return
+	}
+	updated, err := a.store.GetJob(id, true)
+	if err != nil {
+		fail(c, http.StatusInternalServerError, err.Error())
+		return
+	}
+	c.JSON(http.StatusOK, updated)
+}
+
 func (a *API) ExportJob(c *gin.Context) {
 	job, err := a.store.GetJob(c.Param("id"), true)
 	if errors.Is(err, sql.ErrNoRows) {

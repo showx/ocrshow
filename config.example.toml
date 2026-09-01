@@ -23,6 +23,13 @@ model = "qwen3-vl:8b"
 timeout = 600
 # 云端 VL 的密钥请写在 .env 的 OCR_VL_API_KEY，不要写在这个文件里。
 
+# Web 登录账号。密码请写在 config.toml 或 .env，不要提交。
+# 未配置且库里还没有账号时，启动会创建默认 admin / ocrshow。
+# [auth]
+# [[auth.users]]
+# username = "admin"
+# password = "请改成足够长的密码"
+
 # 界面类别来自 sheets/**/*.toml，不必写在这里。
 # 开源默认：自动识别 + 通用表格。
 # 公司内部版式：把 .py 和同名 .toml 丢进 sheets/private/（该目录不入库）。

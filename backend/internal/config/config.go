@@ -25,6 +25,12 @@ type Config struct {
 	VLHost     string
 	TimeoutSec int
 	Categories []Category
+	AuthUsers  []AuthUser
+}
+
+type AuthUser struct {
+	Username string `toml:"username"`
+	Password string `toml:"password"`
 }
 
 type Category struct {
@@ -45,7 +51,12 @@ type fileConfig struct {
 	Addr       string     `toml:"addr"`
 	Paths      filePaths  `toml:"paths"`
 	VL         fileVL     `toml:"vl"`
+	Auth       fileAuth   `toml:"auth"`
 	Categories []Category `toml:"categories"`
+}
+
+type fileAuth struct {
+	Users []AuthUser `toml:"users"`
 }
 
 type filePaths struct {
@@ -151,12 +162,16 @@ func Load() Config {
 	vlModel := "qwen3-vl:8b"
 	timeout := 1800
 	var cats []Category
+	var authUsers []AuthUser
 
 	for _, name := range []string{"config.example.toml", "config.toml"} {
 		fc := loadTomlFile(filepath.Join(root, name))
 		applyFileConfig(fc, &device, &addr, &dataDir, &vlHost, &vlModel, &timeout)
 		if len(fc.Categories) > 0 {
 			cats = fc.Categories
+		}
+		if len(fc.Auth.Users) > 0 {
+			authUsers = mergeAuthUsers(authUsers, fc.Auth.Users)
 		}
 	}
 
@@ -169,6 +184,13 @@ func Load() Config {
 		if n, err := strconv.Atoi(v); err == nil && n > 0 {
 			timeout = n
 		}
+	}
+
+	if u := strings.TrimSpace(os.Getenv("OCR_AUTH_USER")); u != "" {
+		authUsers = mergeAuthUsers(authUsers, []AuthUser{{
+			Username: u,
+			Password: os.Getenv("OCR_AUTH_PASSWORD"),
+		}})
 	}
 
 	dataAbs := absFromRoot(root, dataDir, "data")
@@ -186,7 +208,30 @@ func Load() Config {
 		VLHost:     vlHost,
 		TimeoutSec: timeout,
 		Categories: cats,
+		AuthUsers:  authUsers,
 	}
+}
+
+func mergeAuthUsers(dst []AuthUser, extra []AuthUser) []AuthUser {
+	index := map[string]int{}
+	for i, u := range dst {
+		index[strings.ToLower(strings.TrimSpace(u.Username))] = i
+	}
+	for _, u := range extra {
+		name := strings.TrimSpace(u.Username)
+		if name == "" {
+			continue
+		}
+		key := strings.ToLower(name)
+		next := AuthUser{Username: name, Password: u.Password}
+		if i, ok := index[key]; ok {
+			dst[i] = next
+			continue
+		}
+		index[key] = len(dst)
+		dst = append(dst, next)
+	}
+	return dst
 }
 
 func loadEnvFile(path string) {

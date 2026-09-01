@@ -116,7 +116,7 @@ cd frontend
 npm run dev
 ```
 
-打开 http://127.0.0.1:5173 。默认选「自动识别」；装了内部模块后会出现对应按钮。
+打开 http://127.0.0.1:5173 。未配置账号时，默认 **admin / ocrshow**（请立刻改掉）。默认选「自动识别」；装了内部模块后会出现对应按钮。
 
 生产环境可先 `npm run build`，再只启动 Go；它会托管 `frontend/dist`，默认监听 `:8080`。
 
@@ -129,6 +129,7 @@ npm run dev
 | `OCR_IMAGES` | 命令行默认截图目录，默认 `samples/` |
 | `OCR_VL_HOST` / `OCR_VL_MODEL` | Ollama 地址与模型名 |
 | `OCR_VL_API_KEY` | 云端视觉模型密钥（若使用） |
+| `OCR_AUTH_USER` / `OCR_AUTH_PASSWORD` | Web 登录账号。也可在 `config.toml` 写 `[[auth.users]]` |
 
 完整项见 [`.env.example`](.env.example)。
 

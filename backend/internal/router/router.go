@@ -25,13 +25,22 @@ func New(cfg config.Config, st *store.Store, w *worker.Worker) *gin.Engine {
 	g := r.Group("/api")
 	{
 		g.GET("/health", api.Health)
-		g.GET("/categories", api.Categories)
-		g.GET("/jobs", api.ListJobs)
-		g.POST("/jobs", api.CreateJob)
-		g.GET("/jobs/:id", api.GetJob)
-		g.DELETE("/jobs/:id", api.DeleteJob)
-		g.GET("/jobs/:id/files/:name", api.ServeFile)
-		g.GET("/jobs/:id/export", api.ExportJob)
+		g.POST("/login", api.Login)
+		g.POST("/logout", api.Logout)
+		g.GET("/me", middleware.OptionalAuth(st), api.Me)
+
+		auth := g.Group("")
+		auth.Use(middleware.RequireAuth(st))
+		{
+			auth.GET("/categories", api.Categories)
+			auth.GET("/jobs", api.ListJobs)
+			auth.POST("/jobs", api.CreateJob)
+			auth.GET("/jobs/:id", api.GetJob)
+			auth.PUT("/jobs/:id/records", api.UpdateRecords)
+			auth.DELETE("/jobs/:id", api.DeleteJob)
+			auth.GET("/jobs/:id/files/:name", api.ServeFile)
+			auth.GET("/jobs/:id/export", api.ExportJob)
+		}
 	}
 
 	mountFrontend(r, cfg.Frontend)
